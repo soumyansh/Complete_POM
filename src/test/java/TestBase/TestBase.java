@@ -66,7 +66,7 @@ public class TestBase {
 				driver = new ChromeDriver();
 			}
 			driver.get(config.getProperty("URL"));
-			log.debug("navigated to URL");
+			log.debug("navigated to URL.");
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 			menu = new TopMenu();
