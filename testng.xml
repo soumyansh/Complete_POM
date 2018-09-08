@@ -6,13 +6,13 @@
 </listeners>
   <test name="Test1">
     <classes>
-      <class name="TestCases.LoginTest"/>
+      <class name="TestCases.LoginTest_User"/>
     </classes>
   </test> <!-- Test -->
   
   <test name="Test2">
     <classes>
-      <class name="TestCases.CreateAccountTest"/>
+      <class name="TestCases.CreateAccountTest_User"/>
     </classes>
   </test> <!-- Test -->
   

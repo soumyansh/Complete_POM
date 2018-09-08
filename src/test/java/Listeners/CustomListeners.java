@@ -31,7 +31,7 @@ public class CustomListeners extends TestBase implements ITestListener {
 	}
 
 	public void onTestFailure(ITestResult result) {
-		log.debug("Test got failed and this message is coming via listener");
+		
 		logger.log(LogStatus.FAIL, "Failed");
 		try {
 			TestUtil.CaptureScreenshot();

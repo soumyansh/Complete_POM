@@ -3,6 +3,7 @@ package Pages;
 import org.openqa.selenium.By;
 
 import TestBase.TestBase;
+import Utilities.TestUtil;
 
 public class AccountsPage extends TestBase {
 
@@ -10,6 +11,7 @@ public class AccountsPage extends TestBase {
 		menu.Accounts();
 		driver.findElement(By.cssSelector(".newwhitebtn.customPlusBtn")).click();
 		driver.findElement(By.cssSelector("#Crm_Accounts_ACCOUNTNAME")).sendKeys(membername);
+	
 	}
 	
 }

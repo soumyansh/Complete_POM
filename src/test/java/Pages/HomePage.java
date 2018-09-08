@@ -7,7 +7,9 @@ import TestBase.TestBase;
 public class HomePage extends TestBase {
 
 	public LoginPage ClickOnSignIn(){
-	driver.findElement(By.cssSelector(".signin")).click();
+
+	
+	driver.findElement(By.xpath("//*[text()='Login']")).click();
 		return new LoginPage();
 	}
 	

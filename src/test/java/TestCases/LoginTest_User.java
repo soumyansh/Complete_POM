@@ -11,14 +11,15 @@ import Pages.TopMenu;
 import TestBase.TestBase;
 import Utilities.TestUtil;
 
-public class LoginTest extends TestBase {
+public class LoginTest_User extends TestBase {
 
 	@Test(dataProviderClass = TestUtil.class, dataProvider = "dp")
-	public void doLogin(Hashtable<String, String> data) {
+	public void doLogin_User(Hashtable<String, String> data) {
+	////////logger=extent.startTest("Starting Login");
 		HomePage hp = new HomePage();
 		LoginPage lp = hp.ClickOnSignIn();
 		lp.doLogin(data.get("UserName"), data.get("Password"));
-		System.out.println("Login Done by Garvita 223");
+		System.out.println("Login Done by User");
 
 	}
 

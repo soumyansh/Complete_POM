@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test name="Test(failed)">
+  <listeners>
+    <listener class-name="Listeners.CustomListeners"/>
+  </listeners>
+  <test name="Test2(failed)">
     <classes>
-      <class name="TestCases.LoginTest">
+      <class name="TestCases.CreateAccountTest_User">
         <methods>
-          <include name="doLogin"/>
           <include name="setup"/>
           <include name="tearDown"/>
+          <include name="CreateAccountTest_User" invocation-numbers="0"/>
         </methods>
-      </class> <!-- TestCases.LoginTest -->
+      </class> <!-- TestCases.CreateAccountTest_User -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Test2(failed) -->
 </suite> <!-- Failed suite [Suite] -->

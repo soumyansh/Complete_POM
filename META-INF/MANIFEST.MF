@@ -7,4 +7,5 @@ Export-Package: Pages,
  TestBase,
  TestCases,
  Utilities
-Import-Package: Pages
+Import-Package: Pages,
+ Utilities

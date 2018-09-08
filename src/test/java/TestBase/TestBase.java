@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import org.apache.log4j.Logger;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -21,6 +21,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 import Pages.TopMenu;
 import Utilities.ExcelReader;
 
+
 public class TestBase {
 
 	public static WebDriver driver;
@@ -28,7 +29,7 @@ public class TestBase {
 	public static Properties OR = new Properties();
 	public static FileInputStream fis;
 	public static FileInputStream fis1;
-	public static Logger log = Logger.getLogger("devpinoyLogger");
+	
 	public static ExcelReader excel = new ExcelReader(
 			System.getProperty("user.dir") + "\\src\\test\\resources\\Excel\\TestData.xlsx");
 	public static ExtentReports extent;
@@ -50,25 +51,25 @@ public class TestBase {
 					System.getProperty("user.dir") + "\\src\\test\\resources\\Properties\\OR.properties");
 			config.load(fis);
 			OR.load(fis1);
-			log.info("config file loaded");
+			
 			if (config.getProperty("browser").equals("mozilla")) {
 				System.setProperty("webdriver.gecko.driver",
 						System.getProperty("user.dir") + "\\src\\test\\resources\\Executables\\geckodriver.exe");
 
-				FirefoxProfile ffprofile = new FirefoxProfile();
-				ffprofile.setPreference("dom.webnotifications.enabled", false);
-				driver = new FirefoxDriver(ffprofile);
-
-				log.debug("Mozilla launched");
+				//FirefoxProfile ffprofile = new FirefoxProfile();
+				//ffprofile.setPreference("dom.webnotifications.enabled", false);
+				//driver = new FirefoxDriver(ffprofile);
+				driver = new FirefoxDriver();
+				
 			} else if (config.getProperty("browser").equals("chrome")) {
 				System.setProperty("webdriver.chrome.driver",
 						System.getProperty("user.dir") + "\\src\\test\\resources\\Executables\\chromedriver.exe");
 				driver = new ChromeDriver();
 			}
 			driver.get(config.getProperty("URL"));
-			log.debug("navigated to URL...");
+			
 			driver.manage().window().maximize();
-			driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			menu = new TopMenu();
 		}
 	}
@@ -84,8 +85,8 @@ public class TestBase {
 	@AfterSuite
 	public void tearDown() {
 
-		log.debug("Execution Completed");
-		// driver.quit();
+		
+		 driver.quit();
 
 	}
 

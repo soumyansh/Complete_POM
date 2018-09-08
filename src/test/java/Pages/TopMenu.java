@@ -13,7 +13,7 @@ public class TopMenu extends TestBase {
 
 
 	public void Accounts() {
-		driver.findElement(By.cssSelector("#tab_Accounts")).click();
 		
+		driver.findElement(By.xpath("//*[@data-value='Accounts']")).click();
 	}
 }

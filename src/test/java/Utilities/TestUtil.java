@@ -34,11 +34,13 @@ logger.log(LogStatus.INFO, logger.addScreenCapture(destpath));
 	public Object[][] getData(Method m) {
 
 		String sheetName = m.getName();
+
 		
 		int rows = excel.getRowCount(sheetName);
+
 		
 		int cols = excel.getColumnCount(sheetName);
-		
+
 
 		Object[][] data = new Object[rows - 1][1];
 		
