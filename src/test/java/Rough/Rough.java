@@ -21,7 +21,7 @@ public class Rough extends Rough2 {
 	}
 	public static void Abc() {
 		
-		System.out.println("Hi");
+		System.out.println("Hi2");
 	}
 }
 
