@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <listeners>
-    <listener class-name="Listeners.CustomListeners"/>
-  </listeners>
-  <test name="Test2(failed)">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)" preserve-order="false">
     <classes>
-      <class name="TestCases.CreateAccountTest_User">
+      <class name="Rough.Rough2">
         <methods>
-          <include name="setup"/>
-          <include name="tearDown"/>
-          <include name="CreateAccountTest_User" invocation-numbers="0"/>
+          <include name="Abcd"/>
         </methods>
-      </class> <!-- TestCases.CreateAccountTest_User -->
+      </class>
     </classes>
-  </test> <!-- Test2(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test>
+</suite>
